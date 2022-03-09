@@ -1,0 +1,7 @@
+.immagine-home {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}

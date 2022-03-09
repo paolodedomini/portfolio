@@ -1,0 +1,54 @@
+skills:
+  - title: design_tools
+    apps:
+      - name: Photoshop
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Illustrator
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Affinity Designer
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+  - title: ux/ui_tools
+    apps:
+      - name: Figma
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Invision
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Framer
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Affinity Desinger
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+  - title: tecnology_skills
+    apps:
+      - name: HTML
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: CSS
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: JS
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html'       
+      - name: ReactJS
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html'      
+      - name: GatsbyJs
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+  - title: coding_tools
+    apps:
+      - name: VSCode
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Git
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: NodeJs 
+        logo: '../images/gatsby-astronaut.png'
+        link: 'https://www.adobe.com/it/products/photoshop.html' 
