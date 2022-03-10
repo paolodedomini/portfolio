@@ -1,5 +1,13 @@
+personal:
+  logo: '../images/gatsby-astronaut.png'
+  altlogo: 'logo'
+  titles: 
+    - Web Designer
+    - Graphic Designer
+    - UX/UI
+  paragraph: 'lorem ipsum vaffanculo'
 skills:
-  - title: design_tools
+  - title: Design tools
     apps:
       - name: Photoshop
         logo: '../images/gatsby-astronaut.png'
@@ -10,7 +18,7 @@ skills:
       - name: Affinity Designer
         logo: '../images/gatsby-astronaut.png'
         link: 'https://www.adobe.com/it/products/photoshop.html' 
-  - title: ux/ui_tools
+  - title: UX/UI Tools
     apps:
       - name: Figma
         logo: '../images/gatsby-astronaut.png'
@@ -24,7 +32,7 @@ skills:
       - name: Affinity Desinger
         logo: '../images/gatsby-astronaut.png'
         link: 'https://www.adobe.com/it/products/photoshop.html' 
-  - title: tecnology_skills
+  - title: Tecnology Skills
     apps:
       - name: HTML
         logo: '../images/gatsby-astronaut.png'
@@ -41,7 +49,7 @@ skills:
       - name: GatsbyJs
         logo: '../images/gatsby-astronaut.png'
         link: 'https://www.adobe.com/it/products/photoshop.html' 
-  - title: coding_tools
+  - title: Coding Tools
     apps:
       - name: VSCode
         logo: '../images/gatsby-astronaut.png'
