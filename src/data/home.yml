@@ -1,5 +1,5 @@
 personal:
-  logo: '../images/gatsby-astronaut.png'
+  logo: '../images/logo.png'
   altlogo: 'logo'
   titles: 
     - Web Designer
@@ -9,54 +9,47 @@ personal:
 skills:
   - title: Design tools
     apps:
-      - name: Photoshop
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
-      - name: Illustrator
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+      - name: Ps, Ai
+        logo: '../images/adobe.png'
+        link: 'https://www.adobe.com/it' 
+
       - name: Affinity Designer
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/affinity-designer.png'
+        link: 'https://affinity.serif.com/it/' 
   - title: UX/UI Tools
     apps:
       - name: Figma
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/figma.png'
+        link: 'https://www.figma.com/' 
       - name: Invision
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
-      - name: Framer
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
-      - name: Affinity Desinger
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/invision.png'
+        link: 'https://www.invisionapp.com/' 
+
   - title: Tecnology Skills
     apps:
       - name: HTML
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/html.png'
+        link: 'https://it.wikipedia.org/wiki/HTML' 
       - name: CSS
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/css.png'
+        link: 'https://it.wikipedia.org/wiki/CSS' 
       - name: JS
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html'       
+        logo: '../images/js.png'
+        link: 'https://it.wikipedia.org/wiki/JavaScript'       
       - name: ReactJS
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html'      
+        logo: '../images/react.png'
+        link: 'https://it.reactjs.org/'      
       - name: GatsbyJs
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/gatsby.png'
+        link: 'https://www.gatsbyjs.com/' 
   - title: Coding Tools
     apps:
       - name: VSCode
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: '../images/vscode.png'
+        link: 'https://code.visualstudio.com/' 
       - name: Git
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: ''
+        link: 'https://git-scm.com/' 
       - name: NodeJs 
-        logo: '../images/gatsby-astronaut.png'
-        link: 'https://www.adobe.com/it/products/photoshop.html' 
+        logo: ''
+        link: 'https://nodejs.org/it/' 
