@@ -56,7 +56,8 @@ const HeaderHome = () => {
 
 
 
-    return <header>
+    return (
+    <header>
         <div className="block-home">
             <div className="logo">
                 <GatsbyImage class="image-logo" image={logo} alt={personal.altlogo} />
@@ -96,7 +97,7 @@ const HeaderHome = () => {
             className="immagine-home"
         />
     </header>
-
+)
 }
 
 

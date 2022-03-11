@@ -25,11 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1728,
-        }}
+      <div className="mainwrapper"
       >
         <HeaderHome siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>

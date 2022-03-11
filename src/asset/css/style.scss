@@ -10,8 +10,15 @@ ul {
   margin: 0;
   padding: 0;
 }
+.mainwrapper{
+    position: relative;
+    max-width: 1728px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 4px #878787;
+}
 header {
   position: relative;
+  overflow: hidden;
 }
 .immagine-home {
   position: absolute;
@@ -23,10 +30,14 @@ header {
   display: inline-block;
   margin-left: 3%;
   margin-top: 3%;
+  overflow: hidden;
+
 }
 .logo {
-  margin-left: 2%;
-  margin-top: 2%;
+  margin-left: 8%;
+  margin-top: 0%;
+  animation-name: from-top;
+  animation-duration: 1s;
 
   .image-logo {
     max-width: 100px;
@@ -53,10 +64,17 @@ header {
   }
 }
 .skills {
-  margin-left: 2%;
-  margin-top: 4rem;
-  background-color: #f0f8ff59;
-  padding: 2rem;
+    position: relative;
+    margin-left: 9%;
+    margin-top: 4rem;
+    background-color: #f0f8ff59;
+    padding: 2rem;
+    max-width: 270px;
+    opacity: 0;
+    animation-name: from-left;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 
   & > li {
     font-size: 1.3rem;
@@ -90,12 +108,16 @@ header {
 }
 
 ul.apps {
+    position: relative;
   display: flex;
   flex-wrap: wrap;
   max-width: 419px;
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  margin-bottom: 7rem;
+  animation-name: from-bottom;
+  animation-duration: 1s;
   li {
     flex-basis: 50px;
     margin: 10px;

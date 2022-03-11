@@ -14,3 +14,24 @@
     top: 0;
   }
 }
+@keyframes from-left {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes from-top {
+    0% {
+      transform: translate(0, -60%);
+      opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0%);
+      opacity: 1;
+    }
+  }
