@@ -52,6 +52,7 @@ header {
     li {
       font-family: "ubuntu condensed";
       font-size: 1.2rem;
+      color: white;
     }
   }
   ul::before {
@@ -67,7 +68,7 @@ header {
     position: relative;
     margin-left: 9%;
     margin-top: 4rem;
-    background-color: #f0f8ff59;
+    background-color: #ffffffbd;
     padding: 2rem;
     max-width: 270px;
     opacity: 0;
@@ -130,4 +131,25 @@ ul.apps {
       animation-iteration-count: infinite;
     }
   }
+}
+
+
+.scritte-home {
+  font-size: 17rem;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  max-width: 810px;
+  overflow-wrap: break-word;
+  line-height: 0.7;
+  opacity: 0;
+  color: white;
+  font-family: ubuntu;
+  letter-spacing: -25px;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  text-align: right;
 }

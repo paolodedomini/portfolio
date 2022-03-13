@@ -2,6 +2,8 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
+import Scritte from "./scritte"
+
 const HeaderHome = () => {
     const data = useStaticQuery(graphql`
       {
@@ -53,14 +55,14 @@ const HeaderHome = () => {
         })
     })
     const [app, setApp] = React.useState()
-
+    const [mouseOut, setMouseOut] = React.useState(false)
 
 
     return (
     <header>
         <div className="block-home">
             <div className="logo">
-                <GatsbyImage class="image-logo" image={logo} alt={personal.altlogo} />
+                <GatsbyImage className="image-logo" image={logo} alt={personal.altlogo} />
                 <ul className="titles">
                     {personal.titles.map((item) => {
                         return <li>{item}</li>
@@ -69,7 +71,7 @@ const HeaderHome = () => {
             </div>
             <ul className="skills">
                 {skills.map((item) => {
-                    return <li key={item.title} onMouseOver={() => setApp(item.title)} onMouseLeave={() => setApp('')}>
+                    return <li key={item.title} onMouseOver={() => {setMouseOut(true); setApp(item.title)}} onMouseLeave={() => {setMouseOut(false)}}>
                         {item.title}
                         <ul>
                             {item.apps.map((item) => {
@@ -82,12 +84,12 @@ const HeaderHome = () => {
             <ul className="apps">
                 {arrayListaApps.map((item) => {
                     const logoApp = getImage(item.logo)
-                    console.log(item.main === app, 'test');
                     return (
-                        logoApp && <li className={`${(item.main === app) ? "open" : ""}`}> <a href={item.link} target="_blank" rel="noopener"> <GatsbyImage class="logo-apps" image={logoApp} alt={item.name} /></a></li>)
+                        logoApp && <li className={`${((item.main === app)&& mouseOut) ? "open" : ""}`}> <a href={item.link} target="_blank" rel="noopener"> <GatsbyImage class="logo-apps" image={logoApp} alt={item.name} /></a></li>)
                 })}
             </ul>
         </div>
+        <Scritte app={app} mouseOut={mouseOut}/>
         <StaticImage
             src="../images/back-home.jpg"
             width={1728}
