@@ -1,5 +1,6 @@
 personal:
   logo: '../images/logo.png'
+  defaultImage: '../images/default.jpg'
   altlogo: 'logo'
   titles: 
     - Web Designer
@@ -8,6 +9,9 @@ personal:
   paragraph: 'lorem ipsum vaffanculo'
 skills:
   - title: Design tools
+    motto: 'Complicare è facile, semplificare è difficile. Tutti sono capaci di complicare...'
+    autore: 'Bruno Munari'
+    image: '../images/design.jpg'
     apps:
       - name: Ps, Ai
         logo: '../images/adobe.png'
@@ -17,6 +21,9 @@ skills:
         logo: '../images/affinity-designer.png'
         link: 'https://affinity.serif.com/it/' 
   - title: UX/UI Tools
+    motto: 'Non importa quanto sia interessante <br />  la tua interfaccia, sarebbe meglio se ce ne fosse di meno'
+    autore: 'Alan Cooper'
+    image: '../images/uxui.jpg'
     apps:
       - name: Figma
         logo: '../images/figma.png'
@@ -26,6 +33,9 @@ skills:
         link: 'https://www.invisionapp.com/' 
 
   - title: Tecnology Skills
+    motto: 'Non c'' è design senza disciplina.'
+    autore: 'Massimo Vignelli'
+    image: '../images/tech.jpg'
     apps:
       - name: HTML
         logo: '../images/html.png'
@@ -43,6 +53,9 @@ skills:
         logo: '../images/gatsby.png'
         link: 'https://www.gatsbyjs.com/' 
   - title: Coding Tools
+    motto: '...alla fine, se la soluzione non è bella <br /> so che è sbagliata'
+    autore: 'Richard Buckminster Fuller'
+    image: '../images/coding.jpg'
     apps:
       - name: VSCode
         logo: '../images/vscode.png'

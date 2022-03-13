@@ -8,6 +8,7 @@
     "@fontsource/be-vietnam": "^4.5.0",
     "@fontsource/ubuntu": "^4.5.4",
     "@fontsource/ubuntu-condensed": "^4.5.4",
+    "framer": "^2.0.0",
     "gatsby": "^4.9.2",
     "gatsby-plugin-gatsby-cloud": "^4.9.0",
     "gatsby-plugin-image": "^2.9.0",
