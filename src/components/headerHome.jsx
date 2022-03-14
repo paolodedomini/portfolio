@@ -3,9 +3,9 @@ import { useRef } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion, AnimatePresence } from "framer-motion"
-import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill } from "react-icons/bs"
 import Scritte from "./scritte"
-
+import Skills from "./skills"
+import Intro from "./intro"
 const HeaderHome = () => {
   const data = useStaticQuery(graphql`
       {
@@ -73,6 +73,7 @@ const HeaderHome = () => {
   const arrayListaApps = []
   const [app, setApp] = React.useState({})
   const [mouseOut, setMouseOut] = React.useState(false)
+  const [openSkills, setOpenSkills] = React.useState(false)
   const backgrounds = useRef()
 
   skills.forEach((itema) => {
@@ -93,32 +94,11 @@ const HeaderHome = () => {
             })}
           </ul>
         </div>
-        <ul className="skills">
-          {skills.map((item) => {
-            return <li key={item.title} onMouseOver={() => {
-              setMouseOut(true); setApp(
-                {
-                  title: item.title,
-                  motto: item.motto,
-                  autore: item.autore
-                })
-            }} onMouseLeave={() => { setMouseOut(false) }}>
-              <span>{item.title}</span>
-              <span class="icon-chain-skills"><BsLink45Deg /></span>
-              <ul>
-                {item.apps.map((item) => {
-                  return <li key={item.title}><a href={item.link} target="_blank" rel="noopener">{item.name}</a></li>
-                })}
-              </ul>
-            </li>
-          })}
-          <li>
-            <ul className="social">
-              <li><a href={personal.linkedin} target="_blank" rel="noopener"><span><BsLinkedin /></span></a></li>
-              <li><a href="#"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
-            </ul>
-          </li>
-        </ul>
+
+        <div className="wrapper-box-home">
+          <Intro setOpenSkills={setOpenSkills} openSkills={openSkills} />
+          <Skills skills={skills} setMouseOut={setMouseOut} setApp={setApp} personal={personal} />
+        </div>
 
         <ul className="apps">
           {arrayListaApps.map((item) => {
@@ -126,7 +106,7 @@ const HeaderHome = () => {
 
             return (
               <motion.li
-                animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.6 } : { scale:1, opacity:1 }}
+                animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.6 } : { scale: 1, opacity: 1 }}
 
                 transition={{
                   repeat: 'infinity',
@@ -153,8 +133,8 @@ const HeaderHome = () => {
             <AnimatePresence>
               <motion.div
                 className={`immagine-home `}
-                initial={{ opacity: 0.4, filter: 'blur(50px)', height: '100%' }}
-                animate={{ opacity: 1, filter: 'blur(0px)', height: 400 }}
+                initial={{ opacity: 0.4, filter: 'blur(50px)', height: '20%', top: '40%' }}
+                animate={{ opacity: 1, filter: 'blur(0px)', height: '100%', top: '0%' }}
                 transition={{ duration: 2, ease: [0.075, 0.82, 0.165, 1] }}
                 exit={{ opacity: 0 }}
               >

@@ -4,17 +4,17 @@ body {
   font-family: "ubuntu", sans-serif;
   margin: 0;
 }
-
+*{box-sizing: border-box;}
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.mainwrapper{
-    position: relative;
-    max-width: 1728px;
-    margin: 0 auto;
-    box-shadow: 0px 0px 4px #878787;
+.mainwrapper {
+  position: relative;
+  max-width: 1728px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 4px #878787;
 }
 header {
   position: relative;
@@ -26,7 +26,11 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
-  &.default{
+  overflow: hidden;
+  .gatsby-image-wrapper-constrained {
+    height: 100%;
+  }
+  &.default {
     z-index: 0;
   }
 }
@@ -69,18 +73,54 @@ header {
     left: -10px;
   }
 }
-.skills {
-    position: relative;
-    margin-left: 9%;
-    margin-top: 4rem;
-    background-color: #ffffff;
-    padding: 2rem;
-    max-width: 270px;
+.wrapper-box-home {
+  position: relative;
+  overflow: hidden;
+  max-width: 419px;
+  opacity: 0;
+  animation-name: from-left;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.boxintro {
+  max-width: 334px;
+  background: white;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-left: 9%;
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  height: 100%;
+  opacity: 1;
+  transition: all ease-in-out 0.5s;
+
+  &.close{
     opacity: 0;
-    animation-name: from-left;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+    margin-left: -20%;
+    z-index: 0;
+  }
+  p {
+    line-height: 24px;
+    font-size: 15px;
+}
+}
+.arrow-intro{
+  display: block;
+  text-align: right;
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  cursor: pointer;
+}
+.skills {
+  position: relative;
+  margin-left: 9%;
+  margin-top: 4rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  max-width: 334px;
+
 
   & > li {
     font-size: 1.3rem;
@@ -93,7 +133,7 @@ header {
       margin-bottom: 0;
     }
 
-    span{
+    span {
       display: block;
     }
   }
@@ -119,20 +159,22 @@ header {
       content: "";
     }
   }
-  ul.social{
+  ul.social {
     text-align: right;
     position: absolute;
     right: 3px;
     bottom: 1px;
-    li{
+    li {
       display: inline-block;
       text-align: right;
       margin: 0 3px;
       font-size: 1.5rem;
-     a{color: black;}
+      a {
+        color: black;
+      }
     }
   }
-  .icon-chain-skills{
+  .icon-chain-skills {
     display: inline-block;
     vertical-align: middle;
     font-size: 16px;
@@ -141,7 +183,7 @@ header {
 }
 
 ul.apps {
-    position: relative;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   max-width: 419px;
@@ -165,7 +207,6 @@ ul.apps {
   }
 }
 
-
 .scritte-home {
   position: absolute;
   top: 20%;
@@ -183,7 +224,7 @@ ul.apps {
   hyphens: auto;
   text-align: right;
   overflow: hidden;
-  h2{
+  h2 {
     font-size: 17rem;
     font-weight: bold;
     margin: 0px 50px 0 0;
@@ -194,16 +235,16 @@ ul.apps {
     font-size: 1.5rem;
     letter-spacing: 2px;
     font-family: "Ubuntu Condensed";
-    max-width: 600px;
+    max-width: 650px;
     display: inline-block;
     line-height: 1;
     margin-right: 2%;
     margin-top: 1rem;
     background: rgba(0, 0, 0, 0.419);
-    padding:1rem;
-}
-span{
-  display: block;
-  font-size: 1rem;
-}
+    padding: 1rem;
+  }
+  span {
+    display: block;
+    font-size: 1rem;
+  }
 }
