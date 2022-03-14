@@ -2,6 +2,8 @@ personal:
   logo: '../images/logo.png'
   defaultImage: '../images/default.jpg'
   altlogo: 'logo'
+  linkedin: 'https://www.linkedin.com/in/paolo-de-domini-0430892/'
+  pdf: '../images/free-pdf-download-icon-2617-thumb.png'
   titles: 
     - Web Designer
     - Graphic Designer
@@ -21,7 +23,7 @@ skills:
         logo: '../images/affinity-designer.png'
         link: 'https://affinity.serif.com/it/' 
   - title: UX/UI Tools
-    motto: 'Non importa quanto sia interessante <br />  la tua interfaccia, sarebbe meglio se ce ne fosse di meno'
+    motto: 'Non importa quanto sia interessante la tua interfaccia,<br /> sarebbe meglio se ce ne fosse di meno'
     autore: 'Alan Cooper'
     image: '../images/uxui.jpg'
     apps:

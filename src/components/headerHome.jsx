@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion, AnimatePresence } from "framer-motion"
-
+import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill } from "react-icons/bs"
 import Scritte from "./scritte"
 
 const HeaderHome = () => {
@@ -41,6 +41,13 @@ const HeaderHome = () => {
                         width: 1728
                         quality: 90
                         placeholder: BLURRED)
+                  }
+                }
+                linkedin
+
+                pdf{
+                  childImageSharp{
+                    gatsbyImageData(width:30)
                   }
                 }
                 logo {
@@ -96,7 +103,8 @@ const HeaderHome = () => {
                   autore: item.autore
                 })
             }} onMouseLeave={() => { setMouseOut(false) }}>
-              {item.title}
+              <span>{item.title}</span>
+              <span class="icon-chain-skills"><BsLink45Deg /></span>
               <ul>
                 {item.apps.map((item) => {
                   return <li key={item.title}><a href={item.link} target="_blank" rel="noopener">{item.name}</a></li>
@@ -104,21 +112,32 @@ const HeaderHome = () => {
               </ul>
             </li>
           })}
+          <li>
+            <ul className="social">
+              <li><a href={personal.linkedin} target="_blank" rel="noopener"><span><BsLinkedin /></span></a></li>
+              <li><a href="#"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
+            </ul>
+          </li>
         </ul>
+
         <ul className="apps">
           {arrayListaApps.map((item) => {
             const logoApp = getImage(item.logo)
-            console.log(app.title === item.main);
-            
+
             return (
-                <motion.li
-                  animate={(app.title === item.main) && mouseOut ? {top:-20} : {top:0}}
-                >
-                  <a href={item.link} target="_blank" rel="noopener">
-                    <GatsbyImage class="logo-apps" image={logoApp} alt={item.name} />
-                  </a>
-                </motion.li>
-           
+              <motion.li
+                animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.6 } : { scale:1, opacity:1 }}
+
+                transition={{
+                  repeat: 'infinity',
+
+
+                }}
+              >
+                <a href={item.link} target="_blank" rel="noopener">
+                  <GatsbyImage class="logo-apps" image={logoApp} alt={item.name} />
+                </a>
+              </motion.li>
             )
           })}
         </ul>
@@ -134,8 +153,9 @@ const HeaderHome = () => {
             <AnimatePresence>
               <motion.div
                 className={`immagine-home `}
-                initial={{ opacity: 0.4 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0.4, filter: 'blur(50px)', height: '100%' }}
+                animate={{ opacity: 1, filter: 'blur(0px)', height: 400 }}
+                transition={{ duration: 2, ease: [0.075, 0.82, 0.165, 1] }}
                 exit={{ opacity: 0 }}
               >
                 <GatsbyImage
