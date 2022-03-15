@@ -73,7 +73,7 @@ const HeaderHome = () => {
   const arrayListaApps = []
   const [app, setApp] = React.useState({})
   const [mouseOut, setMouseOut] = React.useState(false)
-  const [openSkills, setOpenSkills] = React.useState(false)
+  const [openSkills, setOpenSkills] = React.useState(true)
   const backgrounds = useRef()
 
   skills.forEach((itema) => {
@@ -97,7 +97,7 @@ const HeaderHome = () => {
 
         <div className="wrapper-box-home">
           <Intro setOpenSkills={setOpenSkills} openSkills={openSkills} />
-          <Skills skills={skills} setMouseOut={setMouseOut} setApp={setApp} personal={personal} />
+          <Skills openSkills={openSkills} setOpenSkills={setOpenSkills} skills={skills} setMouseOut={setMouseOut} setApp={setApp} personal={personal} />
         </div>
 
         <ul className="apps">
@@ -133,7 +133,7 @@ const HeaderHome = () => {
             <AnimatePresence>
               <motion.div
                 className={`immagine-home `}
-                initial={{ opacity: 0.4, filter: 'blur(50px)', height: '20%', top: '40%' }}
+                initial={{ opacity: 0.5, filter: 'blur(50px)', height: '80%', top: '10%' }}
                 animate={{ opacity: 1, filter: 'blur(0px)', height: '100%', top: '0%' }}
                 transition={{ duration: 2, ease: [0.075, 0.82, 0.165, 1] }}
                 exit={{ opacity: 0 }}
@@ -158,6 +158,7 @@ const HeaderHome = () => {
         initial={{ opacity: 0, filter: 'blur(10px)' }}
         animate={{ opacity: 1, filter: 'blur(0px)' }}
         exit={{ opacity: 0, filter: 'blur(10px)' }}
+        transition={{duration:1}}
       >
         <GatsbyImage
           image={defaultImage}

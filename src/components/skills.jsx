@@ -1,9 +1,9 @@
 import React from 'react'
-import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill } from "react-icons/bs"
+import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill, BsFillArrowLeftCircleFill } from "react-icons/bs"
 
-function Skills({skills,setMouseOut,setApp,personal}) {
+function Skills({skills,setMouseOut,setApp,personal, setOpenSkills, openSkills}) {
   return (
-    <ul className="skills">
+    <ul className={`skills ${!openSkills ? 'closed' : ''}`}>
     {skills.map((item) => {
       return <li key={item.title} onMouseOver={() => {
         setMouseOut(true); setApp(
@@ -24,6 +24,7 @@ function Skills({skills,setMouseOut,setApp,personal}) {
     })}
     <li>
       <ul className="social">
+          <li onClick={()=>setOpenSkills(false)}><BsFillArrowLeftCircleFill /> <span>about</span></li>
         <li><a href={personal.linkedin} target="_blank" rel="noopener"><span><BsLinkedin /></span></a></li>
         <li><a href="#"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
       </ul>

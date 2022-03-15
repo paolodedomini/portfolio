@@ -4,7 +4,9 @@ body {
   font-family: "ubuntu", sans-serif;
   margin: 0;
 }
-*{box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 ul {
   list-style: none;
   margin: 0;
@@ -37,7 +39,7 @@ header {
 .block-home {
   display: inline-block;
   margin-left: 3%;
-  margin-top: 3%;
+  margin-top: 47px;
   overflow: hidden;
   position: relative;
   z-index: 3;
@@ -91,12 +93,12 @@ header {
   width: 100%;
   margin-left: 9%;
   margin-top: 4rem;
-  padding: 1rem 2rem;
-  height: 100%;
+  padding: 2rem;
+  height: 81%;
   opacity: 1;
   transition: all ease-in-out 0.5s;
 
-  &.close{
+  &.close {
     opacity: 0;
     margin-left: -20%;
     z-index: 0;
@@ -104,9 +106,9 @@ header {
   p {
     line-height: 24px;
     font-size: 15px;
+  }
 }
-}
-.arrow-intro{
+.arrow-intro {
   display: block;
   text-align: right;
   font-size: 2rem;
@@ -116,11 +118,17 @@ header {
 .skills {
   position: relative;
   margin-left: 9%;
-  margin-top: 4rem;
+  margin-top: 38px;
   background-color: #ffffff;
   padding: 2rem;
   max-width: 334px;
-
+  transition: all ease-in-out 0.5s;
+  opacity: 1;
+  top: 0;
+  &.closed {
+    opacity: 0;
+    top: 20px;
+  }
 
   & > li {
     font-size: 1.3rem;
@@ -128,9 +136,23 @@ header {
     margin-bottom: 1rem;
     display: inline-block;
     cursor: pointer;
+    &:hover {
+      &::before {
+        content: "-";
+        position: absolute;
+        left: 22px;
+      }
+    }
 
     &:last-child {
+      margin-top: 15px;
       margin-bottom: 0;
+      border-top: 1px dashed;
+      padding-top: 16px;
+      display: block;
+      &::before {
+        content: "";
+      }
     }
 
     span {
@@ -161,14 +183,26 @@ header {
   }
   ul.social {
     text-align: right;
-    position: absolute;
     right: 3px;
     bottom: 1px;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+
     li {
       display: inline-block;
       text-align: right;
       margin: 0 3px;
       font-size: 1.5rem;
+      &:first-child {
+        margin-left: 0;
+        margin-right: auto;
+        span {
+          display: inline-block;
+          font-size: 1rem;
+          vertical-align: text-top;
+        }
+      }
       a {
         color: black;
       }
@@ -190,7 +224,7 @@ ul.apps {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  margin-bottom: 76px;
+  margin-bottom: 46px;
   animation-name: from-bottom;
   animation-duration: 1s;
   li {
