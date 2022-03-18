@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Scritte from "./scritte"
 import Skills from "./skills"
 import Intro from "./intro"
+import DownloadPortfolio from "./downloadPortfolio"
 const HeaderHome = () => {
   const data = useStaticQuery(graphql`
       {
@@ -125,18 +126,25 @@ const HeaderHome = () => {
 
       <Scritte app={app} mouseOut={mouseOut} />
 
-      {skills.map((item) => {
-        if ((item.title === app.title) && mouseOut) {
-          const immagineSkill = getImage(item.image)
+   
+        <DownloadPortfolio />
 
-          return (
-            <AnimatePresence>
+
+      <AnimatePresence>
+        {skills.map((item, index) => {
+          if ((item.title === app.title) && mouseOut) {
+            const immagineSkill = getImage(item.image)
+
+            return (
+
               <motion.div
+                key={index}
+
                 className={`immagine-home `}
-                initial={{ opacity: 0.5, filter: 'blur(50px)', height: '80%', top: '10%' }}
+                initial={{ opacity: 0, filter: 'blur(50px)', height: '80%', top: '10%' }}
                 animate={{ opacity: 1, filter: 'blur(0px)', height: '100%', top: '0%' }}
-                transition={{ duration: 2, ease: [0.075, 0.82, 0.165, 1] }}
-                exit={{ opacity: 0 }}
+                exit={{ opacity: 0, filter: 'blur(50px)', height: '80%', top: '10%' }}
+                transition={{ duration: 1, delay: 0.2 }}
               >
                 <GatsbyImage
                   ref={backgrounds}
@@ -145,26 +153,30 @@ const HeaderHome = () => {
 
                 />
               </motion.div>
-            </AnimatePresence>
-          )
+
+            )
+          }
+
         }
 
-      }
+        )}</AnimatePresence>
 
-      )}
 
-      {!mouseOut && <motion.div
-        className={`immagine-home default ${mouseOut ? "open" : ""}`}
-        initial={{ opacity: 0, filter: 'blur(10px)' }}
-        animate={{ opacity: 1, filter: 'blur(0px)' }}
-        exit={{ opacity: 0, filter: 'blur(10px)' }}
-        transition={{duration:1}}
-      >
-        <GatsbyImage
-          image={defaultImage}
-          alt="Immagine di sfondo home"
-        />
-      </motion.div>}
+      <AnimatePresence>
+        <motion.div
+
+          className={`immagine-home default`}
+          initial={{ opacity: 0, filter: 'blur(10px)', }}
+          animate={{ opacity: 1, filter: 'blur(0px)' }}
+          exit={{ opacity: 0, filter: 'blur(10px)' }}
+
+        >
+          <GatsbyImage
+            image={defaultImage}
+            alt="Immagine di sfondo home"
+          />
+        </motion.div>
+      </AnimatePresence>
     </header>
   )
 }

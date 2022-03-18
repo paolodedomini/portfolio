@@ -10,7 +10,7 @@ personal:
     - UX/UI
   paragraph: 'lorem ipsum vaffanculo'
 skills:
-  - title: Design tools
+  - title: Design
     motto: 'Complicare è facile, semplificare è difficile. Tutti sono capaci di complicare...'
     autore: 'Bruno Munari'
     image: '../images/design.jpg'
@@ -22,7 +22,7 @@ skills:
       - name: Affinity Designer
         logo: '../images/affinity-designer.png'
         link: 'https://affinity.serif.com/it/' 
-  - title: UX/UI Tools
+  - title: UX/UI
     motto: 'Non importa quanto sia interessante la tua interfaccia,<br /> sarebbe meglio se ce ne fosse di meno'
     autore: 'Alan Cooper'
     image: '../images/uxui.jpg'
@@ -54,7 +54,7 @@ skills:
       - name: GatsbyJs
         logo: '../images/gatsby.png'
         link: 'https://www.gatsbyjs.com/' 
-  - title: Coding Tools
+  - title: Coding
     motto: '...alla fine, se la soluzione non è bella <br /> so che è sbagliata'
     autore: 'Richard Buckminster Fuller'
     image: '../images/coding.jpg'

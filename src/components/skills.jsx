@@ -1,8 +1,10 @@
 import React from 'react'
 import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill, BsFillArrowLeftCircleFill } from "react-icons/bs"
-
+import {GiHeartOrgan} from 'react-icons/gi'
+import resume from '../images/resume.pdf'
 function Skills({skills,setMouseOut,setApp,personal, setOpenSkills, openSkills}) {
   return (
+    <>
     <ul className={`skills ${!openSkills ? 'closed' : ''}`}>
     {skills.map((item) => {
       return <li key={item.title} onMouseOver={() => {
@@ -26,10 +28,15 @@ function Skills({skills,setMouseOut,setApp,personal, setOpenSkills, openSkills})
       <ul className="social">
           <li onClick={()=>setOpenSkills(false)}><BsFillArrowLeftCircleFill /> <span>about</span></li>
         <li><a href={personal.linkedin} target="_blank" rel="noopener"><span><BsLinkedin /></span></a></li>
-        <li><a href="#"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
+        <li><a href={resume} target="_blank" rel="noopener"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
       </ul>
     </li>
+    <li>
+
+  <span>Made with <GiHeartOrgan /> and <a href="https://www.gatsbyjs.com" rel="noopener" target="_blank">GatsbyJS</a> </span>
+    </li>
   </ul>
+  </>
   )
 }
 
