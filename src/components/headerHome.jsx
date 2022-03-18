@@ -107,7 +107,7 @@ const HeaderHome = () => {
 
             return (
               <motion.li
-                animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.6 } : { scale: 1, opacity: 1 }}
+                animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.3 } : { scale: 1, opacity: 1 }}
 
                 transition={{
                   repeat: 'infinity',
@@ -127,7 +127,7 @@ const HeaderHome = () => {
       <Scritte app={app} mouseOut={mouseOut} />
 
    
-        <DownloadPortfolio />
+        <DownloadPortfolio mouseOut={mouseOut}/>
 
 
       <AnimatePresence>

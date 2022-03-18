@@ -28,7 +28,7 @@ function Skills({skills,setMouseOut,setApp,personal, setOpenSkills, openSkills})
       <ul className="social">
           <li onClick={()=>setOpenSkills(false)}><BsFillArrowLeftCircleFill /> <span>about</span></li>
         <li><a href={personal.linkedin} target="_blank" rel="noopener"><span><BsLinkedin /></span></a></li>
-        <li><a href={resume} target="_blank" rel="noopener"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
+        <li><a href={resume} target="_blank" rel="noopener" download><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
       </ul>
     </li>
     <li>
