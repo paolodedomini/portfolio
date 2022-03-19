@@ -7,6 +7,7 @@ import Scritte from "./scritte"
 import Skills from "./skills"
 import Intro from "./intro"
 import DownloadPortfolio from "./downloadPortfolio"
+import Credits from "./credits"
 const HeaderHome = () => {
   const data = useStaticQuery(graphql`
       {
@@ -75,6 +76,7 @@ const HeaderHome = () => {
   const [app, setApp] = React.useState({})
   const [mouseOut, setMouseOut] = React.useState(false)
   const [openSkills, setOpenSkills] = React.useState(true)
+  const [openCredits, setOpenCredits] = React.useState(false)
   const backgrounds = useRef()
 
   skills.forEach((itema) => {
@@ -97,8 +99,18 @@ const HeaderHome = () => {
         </div>
 
         <div className="wrapper-box-home">
+          <Credits openCredits={openCredits} setOpenCredits={setOpenCredits} />
           <Intro setOpenSkills={setOpenSkills} openSkills={openSkills} />
-          <Skills openSkills={openSkills} setOpenSkills={setOpenSkills} skills={skills} setMouseOut={setMouseOut} setApp={setApp} personal={personal} />
+          <Skills
+            openSkills={openSkills}
+            setOpenSkills={setOpenSkills}
+            skills={skills}
+            setMouseOut={setMouseOut}
+            setApp={setApp}
+            personal={personal} 
+            openCredits = {openCredits}
+            setOpenCredits = {setOpenCredits}
+            />
         </div>
 
         <ul className="apps">
@@ -108,11 +120,8 @@ const HeaderHome = () => {
             return (
               <motion.li
                 animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.3 } : { scale: 1, opacity: 1 }}
-
                 transition={{
                   repeat: 'infinity',
-
-
                 }}
               >
                 <a href={item.link} target="_blank" rel="noopener">
@@ -126,8 +135,8 @@ const HeaderHome = () => {
 
       <Scritte app={app} mouseOut={mouseOut} />
 
-   
-        <DownloadPortfolio mouseOut={mouseOut}/>
+
+      <DownloadPortfolio mouseOut={mouseOut} />
 
 
       <AnimatePresence>

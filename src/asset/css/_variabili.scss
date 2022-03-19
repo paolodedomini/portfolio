@@ -3,6 +3,14 @@
 @import "@fontsource/ubuntu/700.css";
 @import "@fontsource/ubuntu-condensed/400.css";
 
+$phone: "only screen and (max-width : 460px)";
+$tablet: "only screen and (max-width : 860px)";
+$landscape: "only screen and (max-width : 1024px)";
+$desktop: "only screen and (max-width : 1200px)";
+$wide: "only screen and (max-width : 1600px)";
+$big: "only screen and (max-width : 1900px)";
+
+
 @keyframes wobbling {
   0% {
     top: 0;

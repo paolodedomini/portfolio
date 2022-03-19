@@ -10,7 +10,7 @@ function Scritte({ app, mouseOut }) {
         timeline.current = gsap.timeline({ paused: true, })
         timeline.current
             .add("start")
-            .fromTo(scritte.current, { autoAlpha: .0, right: '-40%',filter: 'blur(50px)' }, { autoAlpha: .5, right: '0%',filter: 'blur(0px)', duration: 0.7})
+            .fromTo(scritte.current, { autoAlpha: .0, right: '-40%',filter: 'blur(50px)' }, { autoAlpha: .5, right: '0%',filter: 'blur(0px)', duration: 0.7, delay:1})
             .fromTo(quotes.current, {autoAlpha: 0, top:30}, {autoAlpha:0.7, top:0, duration: 0.7 }, "<")
             .add("stop")
     }, [])
