@@ -18,7 +18,11 @@ function DownloadPortfolio({ mouseOut }) {
                     rel="noopener"
 
                 >
-                    <span>Portfolio <br /><BsFillCloudDownloadFill /></span>   </a>
+                    <span>Portfolio </span>
+                    <div className='icon-download-portfolio'>
+                        <BsFillCloudDownloadFill />
+                    </div>
+                </a>
             </motion.div>}
         </>
 

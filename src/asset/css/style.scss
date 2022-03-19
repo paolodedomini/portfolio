@@ -363,13 +363,32 @@ ul.apps {
   text-align: center;
 
   width: 100%;
-  span {
-    background-color: #ffffff80;
-    padding: 19px;
-    display: inline-block;
-    font-size: 24px;
+  a {
+    position: relative;
+    text-decoration: none;
+    background-color: #ffffffb3;
+    border-radius: 50%;
     color: #11272f;
-    border-radius: 14px;
+    display: inline-flex;
+    font-size: 24px;
     line-height: 1;
+    padding: 19px;
+    width: 140px;
+    height: 140px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.3s;
+    top:0;
+  &:hover{
+    top: -10px;
+  }
+  }
+
+  .icon-download-portfolio svg {
+    font-size: 40px;
+    margin-top: 9px;
+  }
+  span {
   }
 }
