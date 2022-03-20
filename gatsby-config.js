@@ -4,6 +4,7 @@ module.exports = {
     description: `web & graphic design, ux/ui `,
     author: `paolodedomini`,
     siteUrl: `https://paolodedomini.com/`,
+    meta: `web, web design, graphic design, html, css, javascript, gatsbyjs, adobe suite, affinity`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -19,6 +19,7 @@ ul {
   box-shadow: 0px 0px 4px #878787;
   @media #{$tablet} {
     height: 100vh;
+    margin: 0;
   }
 }
 header {
@@ -27,6 +28,7 @@ header {
   background-color: black;
   @media #{$tablet} {
     height: 100%;
+    text-align: center;
   }
 }
 .immagine-home {
@@ -50,6 +52,10 @@ header {
   overflow: hidden;
   position: relative;
   z-index: 30;
+  @media #{$tablet}{
+    margin-top: 15px;
+    margin-left: 0;
+  }
 }
 .logo {
   margin-left: 8%;
@@ -167,7 +173,7 @@ header {
   margin-top: 38px;
   background-color: #ffffff;
   padding: 2rem;
-  max-width: 334px;
+  max-width: 374px;
   transition: all ease-in-out 0.5s;
   opacity: 1;
   top: 0;
@@ -253,6 +259,12 @@ header {
     display: flex;
     width: 100%;
     cursor: default;
+    .portfolio-pdf{
+      display: none;
+      @media #{$tablet}{
+        display: inherit;
+      }
+    }
     li {
       display: inline-block;
       text-align: right;
@@ -327,7 +339,7 @@ ul.apps {
   hyphens: auto;
   text-align: right;
   overflow: hidden;
-  @media #{$phone} {
+  @media #{$tablet} {
     display: none;
   }
   h2 {
@@ -361,8 +373,10 @@ ul.apps {
   bottom: 20px;
   z-index: 30;
   text-align: center;
-
   width: 100%;
+  @media #{$tablet}{
+display: none;
+  }
   a {
     position: relative;
     text-decoration: none;
@@ -383,12 +397,21 @@ ul.apps {
   &:hover{
     top: -10px;
   }
+  @media #{$tablet}{
+
+    background-color: #ffffff;
+    border-radius: 0%; 
+    font-size: 20px;
+    width: 140px;
+    height: auto;
+    flex-direction: row;
+
+  }
   }
 
   .icon-download-portfolio svg {
     font-size: 40px;
     margin-top: 9px;
   }
-  span {
-  }
+
 }

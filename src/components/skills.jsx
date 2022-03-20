@@ -1,7 +1,8 @@
 import React from 'react'
-import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill, BsFillArrowLeftCircleFill } from "react-icons/bs"
+import { BsLink45Deg, BsLinkedin, BsFillFileEarmarkArrowDownFill, BsFillArrowLeftCircleFill, BsFillCloudDownloadFill } from "react-icons/bs"
 import { GiHeartOrgan } from 'react-icons/gi'
 import resume from '../images/resume.pdf'
+import portfoliopdf from '../images/progetti2021.pdf'
 function Skills({
   skills,
   setMouseOut,
@@ -36,8 +37,9 @@ function Skills({
         <li>
           <ul className="social">
             <li onClick={() => setOpenSkills(false)}><BsFillArrowLeftCircleFill /> <span>about</span></li>
-            <li><a href={personal.linkedin} target="_blank" rel="noopener"><span><BsLinkedin /></span></a></li>
-            <li><a href={resume} target="_blank" rel="noopener" download><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
+            <li><a href={personal.linkedin} target="_blank" rel="noopener" title="linkedin"><span><BsLinkedin /></span></a></li>
+            <li><a href={resume} target="_blank" rel="noopener" download title="curriculum"><span><BsFillFileEarmarkArrowDownFill /></span></a></li>
+            <li class="portfolio-pdf"><a href={portfoliopdf} target="_blank" rel="noopener" download title="portfolio"><span><BsFillCloudDownloadFill /></span></a></li>
           </ul>
         </li>
         <li>
