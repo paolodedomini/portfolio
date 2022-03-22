@@ -179,6 +179,7 @@ header {
   top: 0;
   @media #{$phone} {
     margin-left: 0;
+    background-color: #ffffffd9;
   }
   &.closed {
     opacity: 0;
