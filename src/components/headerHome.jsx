@@ -107,10 +107,10 @@ const HeaderHome = () => {
             skills={skills}
             setMouseOut={setMouseOut}
             setApp={setApp}
-            personal={personal} 
-            openCredits = {openCredits}
-            setOpenCredits = {setOpenCredits}
-            />
+            personal={personal}
+            openCredits={openCredits}
+            setOpenCredits={setOpenCredits}
+          />
         </div>
 
         <ul className="apps">
@@ -118,16 +118,18 @@ const HeaderHome = () => {
             const logoApp = getImage(item.logo)
 
             return (
-              <motion.li
-                animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.3 } : { scale: 1, opacity: 1 }}
-                transition={{
-                  repeat: 'infinity',
-                }}
-              >
-                <a href={item.link} target="_blank" rel="noopener">
-                  <GatsbyImage class="logo-apps" image={logoApp} alt={item.name} />
-                </a>
-              </motion.li>
+              <> 
+              {item.logo &&
+                <motion.li
+                  animate={(app.title !== item.main) && mouseOut ? { scale: .8, opacity: 0.3 } : { scale: 1, opacity: 1 }}
+                  transition={{
+                    repeat: 'infinity',
+                  }}
+                >
+                  <a href={item.link} target="_blank" rel="noopener">
+                    <GatsbyImage class="logo-apps" image={logoApp} alt={item.name} />
+                  </a>
+                </motion.li>}</>
             )
           })}
         </ul>

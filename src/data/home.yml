@@ -54,6 +54,9 @@ skills:
       - name: GatsbyJs
         logo: '../images/gatsby.png'
         link: 'https://www.gatsbyjs.com/' 
+      - name: NEXTjs
+        logo: ''
+        link: 'https://nextjs.org/' 
   - title: Coding
     motto: '...alla fine, se la soluzione non è bella <br /> so che è sbagliata'
     autore: 'Richard Buckminster Fuller'
