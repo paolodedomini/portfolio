@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Paolodedomini.com`,
-    description: `web & graphic design, ux/ui `,
+    description: `Paolo de Domini: web & graphic design, ux/ui `,
     author: `paolodedomini`,
     siteUrl: `https://paolodedomini.com/`,
-    meta: `web, web design, frontend, html, css, javascript, gatsbyjs, adobe suite, affinity`
+    meta: `paolo, de domini,web, web design, frontend, html, css, javascript, gatsbyjs, adobe suite, affinity`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
